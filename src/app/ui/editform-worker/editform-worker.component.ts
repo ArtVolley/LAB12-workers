@@ -31,8 +31,8 @@ export class EditformWorkerComponent implements OnInit {
   {
     this.editForm = new FormGroup
     ({
-      name: new FormControl(),
-      surname: new FormControl(),
+      name: new FormControl('',[Validators.required,]),
+      surname: new FormControl('',[Validators.required,]),
       selectType: new FormControl(),
     });
     this.editForm.patchValue({

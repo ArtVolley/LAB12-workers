@@ -31,7 +31,7 @@
                 [style.width]="'150px'" 
                 [style.margin-left]="'-15px'"
               >
-              <option *ngFor="let type of types" [ngValue]="type">{{ type.type }}</option>
+                <option *ngFor="let type of types" [ngValue]="type">{{ type.type }}</option>
                 <!-- <option [ngValue]="workerType.programmer">Программист</option>
                 <option [ngValue]="workerType.designer">Дизайнер</option>
                 <option [ngValue]="workerType.copywriter">Рекламщик</option>
@@ -43,6 +43,7 @@
               class="btn btn-primary btn-sm mt-3"
               [style.width]="'150px'"
               (click)="onEditWorker()"
+              [disabled]="editForm.invalid"
             >
               Применить
             </button>
